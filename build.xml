@@ -1,0 +1,20 @@
+<project name = "cse132b" >
+
+	<property name="web.dir" location= "WebContent"/>
+	<property name="build.dir" location= "build/classes"/>
+	<target name="build-war">
+
+   <war destfile="/Users/timchi/Documents/cse132b/apache-tomcat-8.0.5/webapps/cse132b.war" webxml="${web.dir}/WEB-INF/web.xml">
+      <fileset dir="${web.dir}">
+         <include name="**/*.jsp"/>
+         <include name="**/*.html"/>
+      </fileset>
+      
+      <lib dir="${web.dir}/WEB-INF/lib">
+      </lib>
+      
+      <classes dir="${build.dir}"/>
+   </war>
+   
+	</target>
+</project> 
